@@ -18,7 +18,7 @@ use App\Http\Controllers\public\MainController;
 Route::get('/', [MainController::class, 'index'])->name('index');
 
 Route::get('/log/show/{id}', [MainController::class, 'show'])
-    ->middleware(['auth'])
+    // ->middleware(['auth'])
     ->name('show');
 
 Route::get('/dashboard', function () {
