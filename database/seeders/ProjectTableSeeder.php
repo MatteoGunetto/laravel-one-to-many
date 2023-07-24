@@ -15,10 +15,15 @@ class ProjectTableSeeder extends Seeder
      */
     public function run()
     {
-        Project::factory()->count(15)->create();
+
+        $projects = Project::factory()->count(10)->make();
+
+        foreach ($projects as $project) {
 
 
-
-
+            $type = Type::first();
+            $project->type_id = $type->id;
+            $project->save();
+        }
     }
 }

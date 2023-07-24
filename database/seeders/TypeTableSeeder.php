@@ -17,7 +17,7 @@ class TypeTableSeeder extends Seeder
      */
     public function run()
     {
-        $nomiTypes = ["Privato, Pubblico, Secretato"];
+        $nomiTypes = ["Privato", "Pubblico", "Secretato"];
 
         foreach ($nomiTypes as $nome) {
             $type = new Type();

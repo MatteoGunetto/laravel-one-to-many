@@ -11,9 +11,13 @@
             <span><strong>Numero commit: </strong> </span>
             <span class="fw-bold text-light ">{{ $projects->commit }}</span>
         </div>
-        <div class="container d-flex justify-content-start align-items-center  fs-5">
+        {{-- <div class="container d-flex justify-content-start align-items-center  fs-5">
             <span><strong>accessible: </strong> </span>
             <span class="fw-bold text-light ">{{ $projects->accessible ? 'Privato' : 'Pubblico' }}</span>
+        </div> --}}
+        <div class="container d-flex justify-content-start align-items-center  fs-5">
+            <span><strong>Tipologia:</strong> </span>
+            <span class="fw-bold text-light">{{ $projects->type->name }}</span>
         </div>
     </div>
 @endsection
